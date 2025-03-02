@@ -1,5 +1,5 @@
-mol load pdb ../../step6.0_minimization.pdb
-mol addfile ../../run1_fit-rot+trans_300-500ns.xtc first 1 last -1 step 1 waitfor all;
+mol load pdb PDBFILE.pdb
+mol addfile XTCFILE.xtc first 1 last -1 step 1 waitfor all;
 
 # set two groups to calculate salt bridges
 set group1_start 33
