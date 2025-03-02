@@ -105,22 +105,10 @@ foreach pair [lsort [array names saltbridge_counts]] {
 
 close $out
 
-# output2
-set out2 [open sb_probabilities_simple.dat w]
-
-foreach pair [lsort [array names saltbridge_counts]] {
-    set prob [expr {double($saltbridge_counts($pair))/$total_frames*100}]
-    puts $out "[format "%-5s %-5s %6.2f%%" [lindex [split $pair -] 0] [lindex [split $pair -] 1] $prob]"
-}
-
-close $out2
-
-
 $sel_group1_pos delete
 $sel_group2_neg delete
 $sel_group1_neg delete
 $sel_group2_pos delete
-
 
 exit
 
